@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<h1>Welcome to the Dashboard!</h1>
+<p>Select where you want to go:</p>
+
+<div class="dashboard-buttons">
+    <form asp-controller="Students" asp-action="Index" method="get">
+        <button type="submit" class="btn btn-primary">Manage Students</button>
+    </form>
+    <br>
+    <form asp-controller="Courses" asp-action="Index" method="get">
+        <button type="submit" class="btn btn-primary">Manage Courses</button>
+    </form>
+   <br>
+   <form asp-controller="Majors" asp-action="Index" method="get">
+        <button type="submit" class="btn btn-primary">Manage Majors</button>
+    </form>
+</div>

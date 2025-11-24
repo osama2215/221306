@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Upload Excel";
+}
+
+<h2>Upload Student Excel File</h2>
+
+<form asp-controller="Students" asp-action="Upload" method="post" enctype="multipart/form-data">
+    <input type="file" name="excelFile" accept=".xlsx,.xls" required />
+    <button type="submit">Upload</button>
+</form>
+
+@if (ViewBag.Message != null)
+{
+    <p>@ViewBag.Message</p>
+}

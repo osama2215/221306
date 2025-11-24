@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewData["Title"] = "View";
+}
+<main style="max-width:420px;margin:60px auto;padding:20px;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,0.08)">
+<h2>Admin Login</h2>
+
+<form method="post" asp-controller="Dashboard" asp-action="" class="login-form">
+    <label>Username: </label>
+    <input type="text" name="username" required /><br>
+
+    <label>Password: </label>   
+    <input type="password" name="password" required /><br>
+
+    <button type="submit">Sign In</button>
+
+    @if (ViewBag.Error != null)
+    {
+        <p style="color:red">@ViewBag.Error</p>
+    }
+</form>
+</main>
